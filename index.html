@@ -4,14 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Veterinaria Coyol</title>
-  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
 <header class="header">
   <a href="index.html" class="logo">Veterinaria Coyol</a>
   <button class="hamburguesa" id="menu">
-    ...
+    <span></span>
+    <span></span>
+    <span></span>
   </button>
 
   <nav class="menu" id="menu">
@@ -31,12 +33,29 @@
 
   <section class="servicios">
     <h2>Nuestros servicios</h2>
-    <p>Ofrecemos consulta general y atención personalizada para el bienestar de tu mascota.</p>
-    <ul>
-      <li>Limpieza Dental</li>
-      <li>baño y corte de pelo</li>
-      <li>mantenimiento de salud</li>
-    </ul>
+    <div class="cards" id="cards">
+
+    <article class="tarjeta">
+        <img src="img/vet1.jpg" alt="Servicio 1">
+        <h3>Título del servicio 1</h3>
+        <p>Descripción breve del servicio 1.</p>
+        <a href="servicios.html" class="boton">Ver más</a>
+    </article>
+
+    <article class="tarjeta">
+        <img src="img/vet2.jpg" alt="Servicio 2">
+        <h3>Título del servicio 2</h3>
+        <p>Descripción breve del servicio 2.</p>
+        <a href="servicios.html" class="boton">Ver más</a>
+    </article>
+    <article class="tarjeta">
+        <img src="img/vet3.jpg" alt="Servicio 3">
+        <h3>Título del servicio 3</h3>
+        <p>Descripción breve del servicio 3.</p>
+        <a href="servicios.html" class="boton">Ver más</a>
+    </article>
+
+</div>
   </section>
 
   <section class="galeria">
@@ -48,6 +67,37 @@
         <img src="img/vet3.jpg" alt="Describe la foto 3">
     </div>
       </section>
+
+      <section class="preguntas">
+    <h2>Preguntas Frecuentes</h2>
+
+    <div class="acordion">
+
+        <div class="item">
+            <button class="titulo">¿Pregunta 1?</button>
+            <div class="contenido">
+                <p>Respuesta 1</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <button class="titulo">¿Pregunta 2?</button>
+            <div class="contenido">
+                <p>Respuesta 2</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <button class="titulo">¿Pregunta 3?</button>
+            <div class="contenido">
+                <p>Respuesta 3</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    
 
 </main>
 <footer>

@@ -31,6 +31,7 @@ img {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
+    flex-wrap: wrap;
 }
 .logo {
     font-size: 1.5rem;
@@ -71,6 +72,24 @@ img {
     background-color: var(--color-texto);
     border-radius: 2px;
     transition: transform .2s, opacity .2s;
+}
+.hamburguesa.activo span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburguesa.activo span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburguesa.activo span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.portada {
+    padding: 3rem 1rem;
+    text-align: center;
+    background: var(--color-principal);
+    color: #fff;
 }
 .portada {
     padding: 3rem 1rem;
@@ -144,37 +163,67 @@ img {
     display: block;
 }
 
-/* base: celular */
-.menu { display: none; }        /* lo abrirá la hamburguesa */
+.menu {
+    display: none;
+    width: 100%;
+}
+
+/* lo abrirá la hamburguesa */
+
+.menu.abierto {
+    display: block;
+}
+
+.menu.abierto ul {
+    flex-direction: column;
+    gap: 0;
+    padding-top: 1rem;
+}
 
 @media (min-width: 501px) {
-  .portada h1 { font-size: 2.1rem; }
+    .portada h1 {
+        font-size: 2.1rem;
+    }
 }
 
 @media (min-width: 701px) {
-  .portada { padding: 4rem 2rem; }
-  .footer {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    text-align: left;
-  }
-}
+    .portada {
+        padding: 4rem 2rem;
+    }
 
-@media (min-width: 991px) {
-  .menu { display: block; }       /* menú normal en pantalla grande */
-  .hamburguesa { display: none; }
-  .portada h1 { font-size: 2.6rem; }
-}
+    .footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
 
-@media (min-width: 701px) {
     .tarjeta {
         width: calc(50% - .5rem);
     }
 }
 
 @media (min-width: 991px) {
+    .menu {
+        display: block;
+        width: auto;
+    } /* menú normal en pantalla grande */
+
+    .hamburguesa {
+        display: none;
+    }
+
+    .portada h1 {
+        font-size: 2.6rem;
+    }
+
+    .menu.abierto ul {
+        flex-direction: row;
+        gap: 1rem;
+        padding-top: 0;
+    }
+
     .tarjeta {
-        width: calc(33.33% - .67rem);
+        width: calc(33.333% - .67rem);
     }
 }

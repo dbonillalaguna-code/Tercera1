@@ -29,3 +29,71 @@ titulos.forEach((titulo) => {
         item.classList.toggle("activo");
     });
 });
+//arreglo de objetos
+
+const servicios = [
+  {titulo: "Servicio 1", precio:8000, img:"img/vet1.jpg"},
+  {titulo: "Servicio 2", precio:5000, img:"img/vet2.jpg"},
+  {titulo: "Servicio 3", precio:10000, img:"img/vet3.jpg"}
+];
+
+const contenedor = document.querySelector("#cards");
+
+function pintarCards(lista){
+    contenedor.innerHTML="";
+    
+    lista.forEach(s => {
+        const art = document.createElement("article");
+        art.classList.add("tarjeta");
+        
+        art.innerHTML = `
+            <img src="${s.img}" alt="${s.titulo}">
+            <h3>${s.titulo}</h3>
+            <p>Precio:₡${s.precio}</p>
+        `;
+        
+        contenedor.appendChild(art);
+    });
+}
+
+if (contenedor) pintarCards(servicios);
+
+const slides = document.querySelectorAll(".slide");
+let actual = 0;
+
+function mostrar(i) {
+    slides.forEach(s => s.classList.remove("activa"));
+    slides[i].classList.add("activa");
+}
+
+if (slides.length > 0) {
+    document.querySelector("#siguiente").addEventListener("click", () => {
+        actual = (actual + 1) % slides.length;
+        mostrar(actual);
+    });
+
+    document.querySelector("#anterior").addEventListener("click", () => {
+        actual = (actual - 1 + slides.length) % slides.length;
+        mostrar(actual);
+    });
+}
+
+//validacion de formulario
+const form = document.querySelector(".formulario");
+
+if (form) {
+    form.addEventListener("submit", (e) => {
+        const nombre = form.nombre.value.trim();
+        const correo = form.correo.value.trim();
+        let errores = [];
+
+        if (nombre === "") errores.push("El nombre es obligatorio");
+        if (!correo.includes("@")) errores.push("El correo debe ser válido");
+
+        if (errores.length > 0) {
+            e.preventDefault();
+            document.querySelector("#mensajes").textContent = errores.join(" ");
+        }
+    });
+}
+

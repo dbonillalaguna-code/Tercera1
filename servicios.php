@@ -4,29 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios | Veterinaria Coyol</title>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
-<header class="header">
-    <a href="index.html" class="logo">Veterinaria Coyol</a>
-
-    <button class="hamburguesa" id="menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-
-    <nav class="menu" id="menu">
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="nosotros.html">Sobre nosotros</a></li>
-            <li><a href="servicios.html">Servicios</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
-</header>
-
+<?php include "header.php"; ?>
 <main>
 
     <section class="portada">
@@ -69,21 +51,8 @@
     </section>
 
 </main>
-
-<footer>
-    <div>
-        <p><strong>Veterinaria Coyol</strong></p>
-        <p>Teléfono: 123-456-7890 | Correo: info@veterinariacoyol.com</p>
-    </div>
-
-    <ul class="redes">
-        <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
-        <li><a href="https://twitter.com/" target="_blank">Twitter</a></li>
-        <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
-    </ul>
-
-    <p>&copy; 2026 Veterinaria Coyol.</p>
-</footer>
+</main>
+<?php include "footer.php"; ?>
 
 <script src="js/main.js"defer></script>
 

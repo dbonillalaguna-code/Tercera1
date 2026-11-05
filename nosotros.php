@@ -4,28 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Nosotros | Veterinaria Coyol</title>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
-<header class="header">
-    <a href="index.html" class="logo">Veterinaria Coyol</a>
-
-    <button class="hamburguesa" id="menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-
-    <nav class="menu" id="menu-nav">
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="nosotros.html">Sobre nosotros</a></li>
-            <li><a href="servicios.html">Servicios</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
-</header>
+<?php include "header.php"; ?>
 
 <section class="nosotros">
     <h1>Sobre Nosotros</h1>
@@ -49,6 +32,9 @@
         <img src="img/vet7.jpg" alt="Instalaciones de la veterinaria">
     </div>
 </section>
+
+</main>
+<?php include "footer.php"; ?>
 
 <script src="js/main.js"defer></script>
 

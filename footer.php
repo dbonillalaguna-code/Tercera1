@@ -1,7 +1,7 @@
 <footer class="footer">
     <div>
         <p><strong>Veterinaria Coyol</strong></p>
-        <p>telefono: 123-456-7890 · correo: info@veterinariacoyol.com</p>
+        <p>Teléfono: 123-456-7890 · Correo: info@veterinariacoyol.com</p>
     </div>
 
     <ul class="redes">
@@ -19,5 +19,5 @@
         </li>
     </ul>
 
-    <p>&copy; 2026 Mi sitio.</p>
+    <p>&copy; 2026 Veterinaria Coyol. Todos los derechos reservados.</p>
 </footer>

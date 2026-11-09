@@ -11,7 +11,7 @@ if ($nombre === "") $errores[] = "El nombre es obligatorio.";
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) $errores[] = "El correo no es válido.";
 if ($mensaje === "") $errores[] = "El mensaje es obligatorio.";
 if (!$errores) {
-    // Sustituye esta dirección por el correo real y configura SMTP en el servidor.
+    
     $destinatario = "info@tuempresa.com";
     $asunto = "Nuevo mensaje de contacto - Veterinaria Coyol";
     $cuerpo = "Nombre: {$nombre}\nCorreo: {$email}\n\nMensaje:\n{$mensaje}";

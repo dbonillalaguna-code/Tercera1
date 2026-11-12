@@ -11,7 +11,11 @@
 <main class="pagina-confirmacion">
     <div>
         <h1>Gracias por contactarnos</h1>
-        <p>Te responderemos a la brevedad.</p>
+        <?php if (($_GET["correo"] ?? "") === "pendiente") { ?>
+            <p>No se pudo enviar tu mensaje por correo. Inténtalo más tarde o contáctanos por otro medio.</p>
+        <?php } else { ?>
+            <p>Te responderemos a la brevedad.</p>
+        <?php } ?>
         <a href="index.php" class="boton">Volver al inicio</a>
     </div>
 </main>

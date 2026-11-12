@@ -11,16 +11,13 @@ if ($nombre === "") $errores[] = "El nombre es obligatorio.";
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) $errores[] = "El correo no es válido.";
 if ($mensaje === "") $errores[] = "El mensaje es obligatorio.";
 if (!$errores) {
-    
     $destinatario = "info@tuempresa.com";
     $asunto = "Nuevo mensaje de contacto - Veterinaria Coyol";
     $cuerpo = "Nombre: {$nombre}\nCorreo: {$email}\n\nMensaje:\n{$mensaje}";
     $cabeceras = "From: no-reply@tuempresa.com\r\n" . "Reply-To: {$email}\r\n" . "Content-Type: text/plain; charset=UTF-8";
-    if (mail($destinatario, $asunto, $cuerpo, $cabeceras)) {
-        header("Location: gracias.php");
-        exit;
-    }
-    $errores[] = "No fue posible enviar el mensaje. Configura el servicio de correo o inténtalo más tarde.";
+    $correoEnviado = @mail($destinatario, $asunto, $cuerpo, $cabeceras);
+    header("Location: gracias.php?correo=" . ($correoEnviado ? "enviado" : "pendiente"));
+    exit;
 }
 ?>
 <!DOCTYPE html>
